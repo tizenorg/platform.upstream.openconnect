@@ -42,12 +42,12 @@ packages against openconnect
 %setup -q
 
 %build
-%configure --docdir=%{_docdir}/%{name}/
+%autogen 
+%configure --docdir=%{_docdir}/%{name}/ --disable-nls
 make
 
 %install
 %make_install
-%find_lang %{name}
 
 %post   -p /sbin/ldconfig
 
@@ -66,9 +66,7 @@ make
 %{_includedir}/openconnect.h
 %{_libdir}/libopenconnect.so
 %{_libdir}/pkgconfig/openconnect.pc
-
-
-%lang_package
+%{_docdir}/%{name}/
 
 %docs_package
 
