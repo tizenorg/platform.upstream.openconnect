@@ -1,3 +1,6 @@
+* Sun Mar 10 2013 Anas Nashif <anas.nashif@intel.com> submit/trunk/20130311.011643@6397dd8
+- remove dependency on gtk/gconf
+
 * Sun Mar 10 2013 Anas Nashif <anas.nashif@intel.com> 4980b36
 - initial import
 

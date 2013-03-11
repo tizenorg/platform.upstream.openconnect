@@ -10,8 +10,6 @@ BuildRequires:  pkgconfig(libproxy-1.0)
 BuildRequires:  openssl-devel
 BuildRequires:  pkg-config
 BuildRequires:  pkgconfig(dbus-1)
-BuildRequires:  pkgconfig(gconf-2.0)
-BuildRequires:  pkgconfig(gtk+-2.0)
 BuildRequires:  pkgconfig(libxml-2.0)
 BuildRequires:  vpnc
 Requires:       vpnc
@@ -66,7 +64,6 @@ make
 %{_includedir}/openconnect.h
 %{_libdir}/libopenconnect.so
 %{_libdir}/pkgconfig/openconnect.pc
-%{_docdir}/%{name}/
 
 %docs_package
 
