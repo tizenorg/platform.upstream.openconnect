@@ -6,6 +6,7 @@ Summary:        Open client for Cisco AnyConnect VPN
 Url:            http://www.infradead.org/openconnect.html
 Group:          Networking/Security
 Source0:        ftp://ftp.infradead.org/pub/%{name}/%{name}-%{version}.tar.gz
+Source1001: 	openconnect.manifest
 BuildRequires:  pkgconfig(libproxy-1.0)
 BuildRequires:  openssl-devel
 BuildRequires:  pkg-config
@@ -38,6 +39,7 @@ packages against openconnect
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 %autogen 
@@ -53,6 +55,7 @@ make
 
 
 %files
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %license COPYING.LGPL 
 %{_libdir}/libopenconnect.so.*
@@ -60,6 +63,7 @@ make
 %{_sbindir}/openconnect
 
 %files devel
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %{_includedir}/openconnect.h
 %{_libdir}/libopenconnect.so
